@@ -6,57 +6,30 @@
 	objectVersion = 77;
 	objects = {
 
-/* Begin PBXBuildFile section */
-		8ED1AF5B2D6E4715000FDE9A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED1AF532D6E4715000FDE9A /* AppDelegate.swift */; };
-		8ED1AF5C2D6E4715000FDE9A /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED1AF582D6E4715000FDE9A /* MainTabBarController.swift */; };
-		8ED1AF5D2D6E4715000FDE9A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED1AF592D6E4715000FDE9A /* SceneDelegate.swift */; };
-		8ED1AF5E2D6E4715000FDE9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8ED1AF542D6E4715000FDE9A /* Assets.xcassets */; };
-		8ED1AF602D6E4715000FDE9A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8ED1AF572D6E4715000FDE9A /* LaunchScreen.storyboard */; };
-		8ED1AF632D6E4763000FDE9A /* CartController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED1AF622D6E4763000FDE9A /* CartController.swift */; };
-		8ED1AF662D6E47C3000FDE9A /* ShoesCatalogController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED1AF652D6E47C3000FDE9A /* ShoesCatalogController.swift */; };
-		8ED1AF692D6E4800000FDE9A /* DetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED1AF682D6E4800000FDE9A /* DetailController.swift */; };
-		8ED1AF6C2D6E4832000FDE9A /* ShoesCatalogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED1AF6B2D6E4832000FDE9A /* ShoesCatalogView.swift */; };
-		8ED1AF6E2D6E4862000FDE9A /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED1AF6D2D6E4862000FDE9A /* DetailView.swift */; };
-		8ED1AF702D6E4885000FDE9A /* CartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED1AF6F2D6E4885000FDE9A /* CartView.swift */; };
-		8ED1AF722D6E492C000FDE9A /* ShoesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED1AF712D6E492C000FDE9A /* ShoesCell.swift */; };
-		8ED1AF742D6E4946000FDE9A /* BigShoesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED1AF732D6E4946000FDE9A /* BigShoesCell.swift */; };
-		8ED1AF762D6E4963000FDE9A /* SizeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED1AF752D6E4963000FDE9A /* SizeCell.swift */; };
-		8ED1AF782D6E497C000FDE9A /* CartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED1AF772D6E497C000FDE9A /* CartCell.swift */; };
-		8ED1AF7A2D6E49C1000FDE9A /* UIStackView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED1AF792D6E49C1000FDE9A /* UIStackView+Ext.swift */; };
-		8ED1AF7D2D6E49E6000FDE9A /* UIButton+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED1AF7C2D6E49E5000FDE9A /* UIButton+Ext.swift */; };
-		8ED1AF7F2D6E4A1B000FDE9A /* Shoes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED1AF7E2D6E4A1B000FDE9A /* Shoes.swift */; };
-		8ED1AF822D6E4A51000FDE9A /* CartPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED1AF812D6E4A51000FDE9A /* CartPosition.swift */; };
-		8ED1AF842D6E4CCA000FDE9A /* UITextField+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED1AF832D6E4CCA000FDE9A /* UITextField+Ext.swift */; };
-		8ED1AF862D6E4D00000FDE9A /* Label_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED1AF852D6E4D00000FDE9A /* Label_Extension.swift */; };
-		8ED1AF882D6E4D1F000FDE9A /* Image_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED1AF872D6E4D1F000FDE9A /* Image_Extension.swift */; };
-/* End PBXBuildFile section */
-
 /* Begin PBXFileReference section */
 		8EBD4A6A2D6D24860000780B /* Shoes-Catalog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Shoes-Catalog.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8ED1AF532D6E4715000FDE9A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8ED1AF542D6E4715000FDE9A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		8ED1AF552D6E4715000FDE9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8ED1AF562D6E4715000FDE9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		8ED1AF582D6E4715000FDE9A /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
-		8ED1AF592D6E4715000FDE9A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8ED1AF622D6E4763000FDE9A /* CartController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartController.swift; sourceTree = "<group>"; };
-		8ED1AF652D6E47C3000FDE9A /* ShoesCatalogController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoesCatalogController.swift; sourceTree = "<group>"; };
-		8ED1AF682D6E4800000FDE9A /* DetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailController.swift; sourceTree = "<group>"; };
-		8ED1AF6B2D6E4832000FDE9A /* ShoesCatalogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoesCatalogView.swift; sourceTree = "<group>"; };
-		8ED1AF6D2D6E4862000FDE9A /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
-		8ED1AF6F2D6E4885000FDE9A /* CartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
-		8ED1AF712D6E492C000FDE9A /* ShoesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoesCell.swift; sourceTree = "<group>"; };
-		8ED1AF732D6E4946000FDE9A /* BigShoesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigShoesCell.swift; sourceTree = "<group>"; };
-		8ED1AF752D6E4963000FDE9A /* SizeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeCell.swift; sourceTree = "<group>"; };
-		8ED1AF772D6E497C000FDE9A /* CartCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartCell.swift; sourceTree = "<group>"; };
-		8ED1AF792D6E49C1000FDE9A /* UIStackView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Ext.swift"; sourceTree = "<group>"; };
-		8ED1AF7C2D6E49E5000FDE9A /* UIButton+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Ext.swift"; sourceTree = "<group>"; };
-		8ED1AF7E2D6E4A1B000FDE9A /* Shoes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shoes.swift; sourceTree = "<group>"; };
-		8ED1AF812D6E4A51000FDE9A /* CartPosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartPosition.swift; sourceTree = "<group>"; };
-		8ED1AF832D6E4CCA000FDE9A /* UITextField+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Ext.swift"; sourceTree = "<group>"; };
-		8ED1AF852D6E4D00000FDE9A /* Label_Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Label_Extension.swift; sourceTree = "<group>"; };
-		8ED1AF872D6E4D1F000FDE9A /* Image_Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image_Extension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		8EBD4A7C2D6D24890000780B /* Exceptions for "Shoes-Catalog" folder in "Shoes-Catalog" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 8EBD4A692D6D24860000780B /* Shoes-Catalog */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		8EBD4A6C2D6D24860000780B /* Shoes-Catalog */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				8EBD4A7C2D6D24890000780B /* Exceptions for "Shoes-Catalog" folder in "Shoes-Catalog" target */,
+			);
+			path = "Shoes-Catalog";
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		8EBD4A672D6D24860000780B /* Frameworks */ = {
@@ -72,7 +45,7 @@
 		8EBD4A612D6D24860000780B = {
 			isa = PBXGroup;
 			children = (
-				8ED1AF5A2D6E4715000FDE9A /* Shoes-Catalog */,
+				8EBD4A6C2D6D24860000780B /* Shoes-Catalog */,
 				8EBD4A6B2D6D24860000780B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -83,100 +56,6 @@
 				8EBD4A6A2D6D24860000780B /* Shoes-Catalog.app */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		8ED1AF5A2D6E4715000FDE9A /* Shoes-Catalog */ = {
-			isa = PBXGroup;
-			children = (
-				8ED1AF8A2D6E556F000FDE9A /* Application */,
-				8ED1AF612D6E471C000FDE9A /* MainTabBarController */,
-				8ED1AF642D6E4791000FDE9A /* CartController */,
-				8ED1AF672D6E47E9000FDE9A /* ShoesCatalogController */,
-				8ED1AF6A2D6E4804000FDE9A /* DetailController */,
-				8ED1AF7B2D6E49CD000FDE9A /* Extensions */,
-				8ED1AF802D6E4A3F000FDE9A /* Models */,
-				8ED1AF572D6E4715000FDE9A /* LaunchScreen.storyboard */,
-				8ED1AF552D6E4715000FDE9A /* Info.plist */,
-				8ED1AF542D6E4715000FDE9A /* Assets.xcassets */,
-			);
-			path = "Shoes-Catalog";
-			sourceTree = "<group>";
-		};
-		8ED1AF612D6E471C000FDE9A /* MainTabBarController */ = {
-			isa = PBXGroup;
-			children = (
-				8ED1AF582D6E4715000FDE9A /* MainTabBarController.swift */,
-			);
-			path = MainTabBarController;
-			sourceTree = "<group>";
-		};
-		8ED1AF642D6E4791000FDE9A /* CartController */ = {
-			isa = PBXGroup;
-			children = (
-				8ED1AF622D6E4763000FDE9A /* CartController.swift */,
-				8ED1AF6F2D6E4885000FDE9A /* CartView.swift */,
-				8ED1AF772D6E497C000FDE9A /* CartCell.swift */,
-			);
-			path = CartController;
-			sourceTree = "<group>";
-		};
-		8ED1AF672D6E47E9000FDE9A /* ShoesCatalogController */ = {
-			isa = PBXGroup;
-			children = (
-				8ED1AF652D6E47C3000FDE9A /* ShoesCatalogController.swift */,
-				8ED1AF6B2D6E4832000FDE9A /* ShoesCatalogView.swift */,
-				8ED1AF892D6E54C0000FDE9A /* Cells */,
-			);
-			path = ShoesCatalogController;
-			sourceTree = "<group>";
-		};
-		8ED1AF6A2D6E4804000FDE9A /* DetailController */ = {
-			isa = PBXGroup;
-			children = (
-				8ED1AF682D6E4800000FDE9A /* DetailController.swift */,
-				8ED1AF6D2D6E4862000FDE9A /* DetailView.swift */,
-				8ED1AF752D6E4963000FDE9A /* SizeCell.swift */,
-			);
-			path = DetailController;
-			sourceTree = "<group>";
-		};
-		8ED1AF7B2D6E49CD000FDE9A /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				8ED1AF792D6E49C1000FDE9A /* UIStackView+Ext.swift */,
-				8ED1AF7C2D6E49E5000FDE9A /* UIButton+Ext.swift */,
-				8ED1AF832D6E4CCA000FDE9A /* UITextField+Ext.swift */,
-				8ED1AF852D6E4D00000FDE9A /* Label_Extension.swift */,
-				8ED1AF872D6E4D1F000FDE9A /* Image_Extension.swift */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
-		8ED1AF802D6E4A3F000FDE9A /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				8ED1AF7E2D6E4A1B000FDE9A /* Shoes.swift */,
-				8ED1AF812D6E4A51000FDE9A /* CartPosition.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		8ED1AF892D6E54C0000FDE9A /* Cells */ = {
-			isa = PBXGroup;
-			children = (
-				8ED1AF732D6E4946000FDE9A /* BigShoesCell.swift */,
-				8ED1AF712D6E492C000FDE9A /* ShoesCell.swift */,
-			);
-			path = Cells;
-			sourceTree = "<group>";
-		};
-		8ED1AF8A2D6E556F000FDE9A /* Application */ = {
-			isa = PBXGroup;
-			children = (
-				8ED1AF532D6E4715000FDE9A /* AppDelegate.swift */,
-				8ED1AF592D6E4715000FDE9A /* SceneDelegate.swift */,
-			);
-			path = Application;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,6 +72,9 @@
 			buildRules = (
 			);
 			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				8EBD4A6C2D6D24860000780B /* Shoes-Catalog */,
 			);
 			name = "Shoes-Catalog";
 			packageProductDependencies = (
@@ -240,8 +122,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8ED1AF5E2D6E4715000FDE9A /* Assets.xcassets in Resources */,
-				8ED1AF602D6E4715000FDE9A /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,41 +132,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8ED1AF702D6E4885000FDE9A /* CartView.swift in Sources */,
-				8ED1AF7D2D6E49E6000FDE9A /* UIButton+Ext.swift in Sources */,
-				8ED1AF6C2D6E4832000FDE9A /* ShoesCatalogView.swift in Sources */,
-				8ED1AF882D6E4D1F000FDE9A /* Image_Extension.swift in Sources */,
-				8ED1AF722D6E492C000FDE9A /* ShoesCell.swift in Sources */,
-				8ED1AF742D6E4946000FDE9A /* BigShoesCell.swift in Sources */,
-				8ED1AF842D6E4CCA000FDE9A /* UITextField+Ext.swift in Sources */,
-				8ED1AF762D6E4963000FDE9A /* SizeCell.swift in Sources */,
-				8ED1AF6E2D6E4862000FDE9A /* DetailView.swift in Sources */,
-				8ED1AF822D6E4A51000FDE9A /* CartPosition.swift in Sources */,
-				8ED1AF782D6E497C000FDE9A /* CartCell.swift in Sources */,
-				8ED1AF7F2D6E4A1B000FDE9A /* Shoes.swift in Sources */,
-				8ED1AF5B2D6E4715000FDE9A /* AppDelegate.swift in Sources */,
-				8ED1AF632D6E4763000FDE9A /* CartController.swift in Sources */,
-				8ED1AF5C2D6E4715000FDE9A /* MainTabBarController.swift in Sources */,
-				8ED1AF7A2D6E49C1000FDE9A /* UIStackView+Ext.swift in Sources */,
-				8ED1AF5D2D6E4715000FDE9A /* SceneDelegate.swift in Sources */,
-				8ED1AF692D6E4800000FDE9A /* DetailController.swift in Sources */,
-				8ED1AF862D6E4D00000FDE9A /* Label_Extension.swift in Sources */,
-				8ED1AF662D6E47C3000FDE9A /* ShoesCatalogController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		8ED1AF572D6E4715000FDE9A /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8ED1AF562D6E4715000FDE9A /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		8EBD4A7E2D6D24890000780B /* Debug */ = {
@@ -300,9 +149,8 @@
 				INFOPLIST_FILE = "Shoes-Catalog/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -310,13 +158,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.veremm.taras.Shoes-Catalog";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
-				SUPPORTS_MACCATALYST = NO;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
-				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -331,9 +175,8 @@
 				INFOPLIST_FILE = "Shoes-Catalog/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -341,13 +184,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.veremm.taras.Shoes-Catalog";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
-				SUPPORTS_MACCATALYST = NO;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
-				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
