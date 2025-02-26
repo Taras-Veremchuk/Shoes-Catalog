@@ -57,7 +57,13 @@ extension DetailController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SizeCell.reusedID, for: indexPath) as! SizeCell
+        guard
+            let cell = collectionView.dequeueReusableCell(
+                withReuseIdentifier: SizeCell.reusedID, for: indexPath)
+                as? SizeCell
+        else {
+            return UICollectionViewCell()
+        }
         let currentSize = shoes.size[indexPath.item]
         cell.sizeLabel.text = currentSize.description
         if let selectedSize {

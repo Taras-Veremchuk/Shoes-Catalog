@@ -19,7 +19,7 @@ class CartCell: UICollectionViewCell {
     private let shoesImageView = UIImageView(customImage: .adidas, contentMode: .scaleAspectFill, cornerRadius: 20)
     private let titleLabel = UILabel(fontSize: 28, lines: 2, isBold: true)
     private let priceLabel = UILabel()
-    private let sizesLabel = UILabel()
+    private let sizesLabel = UILabel(fontSize: 18)
     private let stepperLabel = UILabel()
     private let stepper = UIStepper()
     private let sumPriceLabel = UILabel(fontSize: 22, isBold: true)
@@ -62,7 +62,7 @@ class CartCell: UICollectionViewCell {
         shoesImageView.image = UIImage(named: shoe.shoes.imgTitle)
         titleLabel.text = shoe.shoes.title
         priceLabel.text = "\(shoe.shoes.price) $"
-        sizesLabel.text = "\(shoe.size)"
+        sizesLabel.text = "Size: \(shoe.size)"
         stepperLabel.text = "\(shoe.count)"
         stepper.value = Double(shoe.count)
         sumPriceLabel.text = "Price: \(shoe.count * shoe.shoes.price) $"
@@ -85,6 +85,7 @@ class CartCell: UICollectionViewCell {
         addSubview(priceLabel)
         addSubview(stepper)
         addSubview(stepperLabel)
+        addSubview(sizesLabel)
        
         sumPriceLabel.translatesAutoresizingMaskIntoConstraints = false
         shoesImageView.translatesAutoresizingMaskIntoConstraints = false
@@ -93,11 +94,13 @@ class CartCell: UICollectionViewCell {
         priceLabel.translatesAutoresizingMaskIntoConstraints = false
         stepper.translatesAutoresizingMaskIntoConstraints = false
         stepperLabel.translatesAutoresizingMaskIntoConstraints = false
+        sizesLabel.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
             stepperLabel.leftAnchor.constraint(equalTo: shoesImageView.rightAnchor, constant: 10),
             stepperLabel.centerYAnchor.constraint(equalTo: stepper.centerYAnchor),
-            stepperLabel.topAnchor.constraint(equalTo: priceLabel.bottomAnchor, constant: 20)
+            stepperLabel.topAnchor.constraint(equalTo: priceLabel.bottomAnchor, constant: 20),
+            stepper.leftAnchor.constraint(equalTo: stepperLabel.rightAnchor, constant: 40)
         ])
         NSLayoutConstraint.activate([
             sumPriceLabel.leftAnchor.constraint(equalTo: shoesImageView.rightAnchor, constant: 10),
@@ -125,7 +128,8 @@ class CartCell: UICollectionViewCell {
             priceLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 10)
         ])
         NSLayoutConstraint.activate([
-            stepper.leftAnchor.constraint(equalTo: stepperLabel.rightAnchor, constant: 40)
+            sizesLabel.topAnchor.constraint(equalTo: stepperLabel.bottomAnchor, constant: 20),
+            sizesLabel.leftAnchor.constraint(equalTo: shoesImageView.rightAnchor, constant: 10)
         ])
 
     }
