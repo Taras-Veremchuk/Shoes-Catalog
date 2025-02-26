@@ -20,7 +20,7 @@ class CartController: UIViewController {
                 print(position.shoes.title)
             }
             print("---------")
-            
+
             if !positions.isEmpty {
                 self.tabBarItem.badgeValue = positions.count.description
                 self.tabBarItem.badgeColor = .red
@@ -32,7 +32,7 @@ class CartController: UIViewController {
             mainView.updateTotalPrice(positions)
         }
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(mainView)
@@ -40,10 +40,12 @@ class CartController: UIViewController {
         title = "Bin"
         mainView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            mainView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            mainView.topAnchor.constraint(
+                equalTo: view.safeAreaLayoutGuide.topAnchor),
             mainView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             mainView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            mainView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+            mainView.bottomAnchor.constraint(
+                equalTo: view.safeAreaLayoutGuide.bottomAnchor),
         ])
     }
 }
@@ -61,13 +63,21 @@ extension CartController: AddShoesDelegate {
 }
 
 extension CartController: UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(
+        _ collectionView: UICollectionView, numberOfItemsInSection section: Int
+    ) -> Int {
         positions.count
     }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CartCell.reusedID, for: indexPath) as? CartCell else {
+
+    func collectionView(
+        _ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath
+    ) -> UICollectionViewCell {
+
+        guard
+            let cell = collectionView.dequeueReusableCell(
+                withReuseIdentifier: CartCell.reusedID, for: indexPath)
+                as? CartCell
+        else {
             return UICollectionViewCell()
         }
         if !positions.isEmpty {
@@ -77,12 +87,15 @@ extension CartController: UICollectionViewDataSource {
         cell.delegate = self
         return cell
     }
-    
-    
+
 }
 
 extension CartController: UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+    func collectionView(
+        _ collectionView: UICollectionView,
+        layout collectionViewLayout: UICollectionViewLayout,
+        sizeForItemAt indexPath: IndexPath
+    ) -> CGSize {
         return .init(width: view.frame.width - 16, height: 280)
     }
 }
@@ -94,7 +107,7 @@ extension CartController: CartCellDelegate {
             self.positions[index].count = count
         }
     }
-    
+
     func remoweShoes(shoeId: String) {
         let index = self.positions.firstIndex { String($0.id) == shoeId }
         if let index {
@@ -102,4 +115,3 @@ extension CartController: CartCellDelegate {
         }
     }
 }
-

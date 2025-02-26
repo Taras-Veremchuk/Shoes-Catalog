@@ -8,7 +8,10 @@
 import UIKit
 
 extension UIImageView {
-    convenience init(customImage: UIImage?, contentMode: UIView.ContentMode, cornerRadius: CGFloat = 0) {
+    convenience init(
+        customImage: UIImage?, contentMode: UIView.ContentMode,
+        cornerRadius: CGFloat = 0
+    ) {
         self.init(image: customImage)
         self.contentMode = contentMode
         layer.masksToBounds = true

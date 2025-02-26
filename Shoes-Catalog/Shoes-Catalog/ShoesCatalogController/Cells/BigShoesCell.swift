@@ -9,18 +9,19 @@ import UIKit
 
 class BigShoesCell: UICollectionViewCell {
     static let reusedID = "BigShoesCell"
-    
-    let shoesImageView = UIImageView(customImage: .adidas, contentMode: .scaleAspectFill, cornerRadius: 20)
+
+    let shoesImageView = UIImageView(
+        customImage: .adidas, contentMode: .scaleAspectFill, cornerRadius: 20)
     let titleLabel = UILabel(textColor: .white, fontSize: 28)
     let priceLabel = UILabel(textColor: .white, fontSize: 48, isBold: true)
     let sizesLabel = UILabel()
-    
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         setViews()
         setConstraints()
     }
-    
+
     func setupCell(shoe: Shoes) {
         priceLabel.text = "\(shoe.price)zł"
         titleLabel.text = shoe.title
@@ -31,16 +32,15 @@ class BigShoesCell: UICollectionViewCell {
             equalToConstant: widthOfLabel(sizesText)
         ).isActive = true
     }
-    
-    
+
     private func textOfLabel(_ sizes: [Int]) -> String {
         return sizes.map { "\($0)" }.joined(separator: ", ")
     }
-    
+
     private func widthOfLabel(_ labelText: String) -> CGFloat {
         return CGFloat(16 + labelText.count * 8)
     }
-    
+
     func setViews() {
         sizesLabel.backgroundColor = UIColor(white: 1, alpha: 0.8)
         sizesLabel.textAlignment = .center
@@ -52,7 +52,9 @@ class BigShoesCell: UICollectionViewCell {
         addSubview(shoesImageView)
         addSubview(sizesLabel)
 
-        let stack = UIStackView(views: [titleLabel, priceLabel], axis: .vertical, spacing: 10, aligment: .leading)
+        let stack = UIStackView(
+            views: [titleLabel, priceLabel], axis: .vertical, spacing: 10,
+            aligment: .leading)
 
         addSubview(stack)
         shoesImageView.translatesAutoresizingMaskIntoConstraints = false

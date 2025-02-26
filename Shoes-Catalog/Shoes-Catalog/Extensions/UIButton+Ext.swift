@@ -8,7 +8,9 @@
 import UIKit
 
 extension UIButton {
-    convenience init(title: String?, bgColor: UIColor, cornerRadius: CGFloat, height: CGFloat) {
+    convenience init(
+        title: String?, bgColor: UIColor, cornerRadius: CGFloat, height: CGFloat
+    ) {
         self.init(type: .system)
         layer.cornerRadius = cornerRadius
         layer.masksToBounds = true
