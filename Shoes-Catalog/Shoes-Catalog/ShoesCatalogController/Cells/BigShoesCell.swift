@@ -10,9 +10,9 @@ import UIKit
 class BigShoesCell: UICollectionViewCell {
     static let reusedID = "BigShoesCell"
     
-    let shoesImageView = UIImageView()
-    let titleLabel = UILabel()
-    let priceLabel = UILabel()
+    let shoesImageView = UIImageView(customImage: .adidas, contentMode: .scaleAspectFill, cornerRadius: 20)
+    let titleLabel = UILabel(textColor: .white, fontSize: 28)
+    let priceLabel = UILabel(textColor: .white, fontSize: 48, isBold: true)
     let sizesLabel = UILabel()
     
     override init(frame: CGRect) {
@@ -30,8 +30,6 @@ class BigShoesCell: UICollectionViewCell {
         sizesLabel.widthAnchor.constraint(
             equalToConstant: widthOfLabel(sizesText)
         ).isActive = true
-        self.layer.cornerRadius = 20
-        self.layer.masksToBounds = true
     }
     
     
@@ -44,25 +42,17 @@ class BigShoesCell: UICollectionViewCell {
     }
     
     func setViews() {
-        priceLabel.font = .boldSystemFont(ofSize: 48)
-        titleLabel.font = .systemFont(ofSize: 28)
-        shoesImageView.contentMode = .scaleAspectFill
-        shoesImageView.layer.masksToBounds = true
         sizesLabel.backgroundColor = UIColor(white: 1, alpha: 0.8)
         sizesLabel.textAlignment = .center
         sizesLabel.layer.cornerRadius = 16
         sizesLabel.clipsToBounds = true
-        titleLabel.textColor = .white
-        priceLabel.textColor = .white
     }
 
     func setConstraints() {
         addSubview(shoesImageView)
         addSubview(sizesLabel)
 
-        let stack = UIStackView(arrangedSubviews: [titleLabel, priceLabel])
-        stack.axis = .vertical
-        stack.alignment = .leading
+        let stack = UIStackView(views: [titleLabel, priceLabel], axis: .vertical, spacing: 10, aligment: .leading)
 
         addSubview(stack)
         shoesImageView.translatesAutoresizingMaskIntoConstraints = false

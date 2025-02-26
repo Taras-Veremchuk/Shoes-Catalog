@@ -15,7 +15,14 @@ class DetailController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view = mainView
+        view.addSubview(mainView)
+        mainView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            mainView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            mainView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            mainView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            mainView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+        ])
         mainView.sizesCollectionView.dataSource = self
         mainView.sizesCollectionView.delegate = self
         setupViews()
@@ -23,9 +30,7 @@ class DetailController: UIViewController {
     }
     
     private func setupViews() {
-        mainView.titleLabel.text = shoes.title
-        mainView.priceLabel.text = "\(shoes.price) $"
-        mainView.imageView.image = UIImage(named: shoes.imgTitle)
+        mainView.setupView(shoes)
     }
     
     private func setActions() {

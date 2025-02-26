@@ -8,10 +8,9 @@
 import UIKit
 
 extension UIButton {
-    convenience init(title: String?, bgColor: UIColor) {
+    convenience init(title: String?, bgColor: UIColor, cornerRadius: CGFloat, height: CGFloat) {
         self.init(type: .system)
-        let height: CGFloat = 60
-        layer.cornerRadius = height / 2
+        layer.cornerRadius = cornerRadius
         layer.masksToBounds = true
         backgroundColor = bgColor
         setTitle(title, for: .normal)

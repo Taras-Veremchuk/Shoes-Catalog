@@ -8,16 +8,22 @@
 import UIKit
 
 class DetailView: UIView {
-    let addToCartBtn = UIButton(title: "Add To Bin", bgColor: UIColor(named: "btnColor") ?? .blue)
-    let imageView = UIImageView()
-    let titleLabel = UILabel()
+    let addToCartBtn = UIButton(title: "Add To Bin", bgColor: UIColor(named: "btnColor") ?? .blue, cornerRadius: 30, height: 60)
+    let imageView = UIImageView(customImage: .adidas, contentMode: .scaleAspectFill, cornerRadius: 20)
+    let titleLabel = UILabel(fontSize: 24, isBold: true)
     var sizesCollectionView: UICollectionView!
-    let priceLabel = UILabel()
+    let priceLabel = UILabel(fontSize: 20)
     
     init() {
         super.init(frame: .zero)
         setViews()
         setConstraints()
+    }
+    
+    func setupView(_ shoe: Shoes) {
+        titleLabel.text = shoe.title
+        priceLabel.text = "\(shoe.price) $"
+        imageView.image = UIImage(named: shoe.imgTitle)
     }
     
     private func setupCollectionView() {
@@ -34,22 +40,13 @@ class DetailView: UIView {
     
     private func setViews() {
         setupCollectionView()
-        titleLabel.font = .boldSystemFont(ofSize: 24)
-        priceLabel.font = .systemFont(ofSize: 20)
-        imageView.image = .adidas
-        imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
-        imageView.layer.cornerRadius = 20
-        imageView.layer.masksToBounds = true
         backgroundColor = .white
     }
     
     private func setConstraints() {
-        let stack = UIStackView(arrangedSubviews: [imageView, titleLabel, priceLabel, sizesCollectionView, addToCartBtn])
+        let stack = UIStackView(views: [imageView, titleLabel, priceLabel, sizesCollectionView, addToCartBtn], axis: .vertical, spacing: 12, aligment: .fill)
         stack.translatesAutoresizingMaskIntoConstraints = false
-        stack.axis = .vertical
-        stack.alignment = .fill
-        stack.spacing = 12
         addSubview(stack)
         
         NSLayoutConstraint.activate([

@@ -10,16 +10,12 @@ import UIKit
 final class CartView: UIView {
     private let bottomView = UIView()
     var cartCollectionView: UICollectionView!
-    private let totalLabel = UILabel()
-    var totalPriceLabel = UILabel()
-    private let buyBtn = UIButton(title: "Order Now", bgColor: UIColor(named: "btnColor") ?? .blue)
+    private let totalLabel = UILabel(title: "Total" , fontSize: 28, isBold: true)
+    var totalPriceLabel = UILabel(title: "0 $" , fontSize: 28, isBold: true)
+    private let buyBtn = UIButton(title: "Order Now", bgColor: UIColor(named: "btnColor") ?? .blue, cornerRadius: 30, height: 60)
     
     init() {
         super.init(frame: .zero)
-        totalLabel.text = "Total"
-        totalLabel.font = .boldSystemFont(ofSize: 28)
-        totalPriceLabel.font = .boldSystemFont(ofSize: 28)
-        totalPriceLabel.text = "0 $"
         bottomView.backgroundColor = .white
         setupCollectionView()
         setConstraints()
@@ -74,14 +70,17 @@ final class CartView: UIView {
             buyBtn.trailingAnchor.constraint(equalTo: bottomView.trailingAnchor, constant: -8)
         ])
         
-        let stackTotalPtice = UIStackView(views: [totalLabel, totalPriceLabel], axis: .horizontal, spacing: 25, aligment: .fill)
-        bottomView.addSubview(stackTotalPtice)
-        stackTotalPtice.translatesAutoresizingMaskIntoConstraints = false
+     
+        bottomView.addSubview(totalLabel)
+        totalLabel.translatesAutoresizingMaskIntoConstraints = false
+        bottomView.addSubview(totalPriceLabel)
+        totalPriceLabel.translatesAutoresizingMaskIntoConstraints = false
 
         NSLayoutConstraint.activate([
-            stackTotalPtice.leftAnchor.constraint(equalTo: bottomView.leftAnchor, constant: 8),
-            stackTotalPtice.rightAnchor.constraint(equalTo: bottomView.rightAnchor, constant: -8),
-            stackTotalPtice.bottomAnchor.constraint(equalTo: buyBtn.topAnchor, constant: -10)
+            totalLabel.leadingAnchor.constraint(equalTo: bottomView.leadingAnchor, constant: 8),
+            totalLabel.centerYAnchor.constraint(equalTo: totalPriceLabel.centerYAnchor),
+            totalPriceLabel.bottomAnchor.constraint(equalTo: buyBtn.topAnchor, constant: -10),
+            totalPriceLabel.trailingAnchor.constraint(equalTo: bottomView.trailingAnchor, constant: -8)
         ])
     }
     

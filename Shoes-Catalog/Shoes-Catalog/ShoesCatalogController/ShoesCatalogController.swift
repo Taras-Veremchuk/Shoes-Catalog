@@ -14,7 +14,14 @@ class ShoesCatalogController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view = mainView
+        view.addSubview(mainView)
+        mainView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            mainView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            mainView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            mainView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            mainView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+        ])
         setupCatalog()
     }
 

@@ -17,12 +17,12 @@ class CartCell: UICollectionViewCell {
     
     weak var delegate: CartCellDelegate?
     private let shoesImageView = UIImageView(customImage: .adidas, contentMode: .scaleAspectFill, cornerRadius: 20)
-    private let titleLabel = UILabel()
+    private let titleLabel = UILabel(fontSize: 28, lines: 2, isBold: true)
     private let priceLabel = UILabel()
     private let sizesLabel = UILabel()
     private let stepperLabel = UILabel()
     private let stepper = UIStepper()
-    private let sumPriceLabel = UILabel()
+    private let sumPriceLabel = UILabel(fontSize: 22, isBold: true)
     private let deleteBtn = UIButton()
     private var id = ""
     
@@ -72,9 +72,6 @@ class CartCell: UICollectionViewCell {
     
     private  func setViews() {
         backgroundColor = .clear
-        titleLabel.font = .boldSystemFont(ofSize: 28)
-        titleLabel.numberOfLines = 2
-        sumPriceLabel.font = .boldSystemFont(ofSize: 22)
         deleteBtn.setBackgroundImage(UIImage(systemName: "trash"), for: .normal)
         deleteBtn.tintColor = .systemRed
         deleteBtn.backgroundColor = .clear
