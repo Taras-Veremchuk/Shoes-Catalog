@@ -22,12 +22,13 @@ class ShoesCell: UICollectionViewCell {
     }
     
     
-    func setupCell(shoe: Shoes, sizesString: String, sizeLabel: CGFloat) { //sizeLabel: CGFloat переробити
+    func setupCell(shoe: Shoes) {
         priceLabel.text = "\(shoe.price)zł"
         titleLabel.text = shoe.title
         shoesImageView.image = UIImage(named: shoe.imgTitle)
-        sizesLabel.text = sizesString
-        sizesLabel.widthAnchor.constraint(equalToConstant: sizeLabel).isActive = true
+        let sizesText = textOfLabel(shoe.size)
+        sizesLabel.text = sizesText
+        sizesLabel.widthAnchor.constraint(equalToConstant: widthOfLabel(sizesText)).isActive = true
         self.layer.cornerRadius = 20
         self.layer.masksToBounds = true
     }
@@ -44,15 +45,12 @@ class ShoesCell: UICollectionViewCell {
         priceLabel.textColor = .white
     }
     
-    private func sizeOfLabel(_ sizes: [Int]) -> String {
-        var sizesStr = ""
-        for (index, size) in sizes.enumerated() {
-            sizesStr += size.description
-            if index != sizes.count - 1 {
-                sizesStr += ", "
-            }
-        }
-        return "String"
+    private func textOfLabel(_ sizes: [Int]) -> String {
+        return sizes.map { "\($0)" }.joined(separator: ", ")
+    }
+    
+    private func widthOfLabel(_ labelText: String) -> CGFloat {
+        return CGFloat(16 + labelText.count * 8)
     }
     
     func setConstraints() {
